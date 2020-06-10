@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Jaldi|Lato|Krona+One|Odibee+Sans|Oswald|Iceland&display=swap" rel="stylesheet">
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style type="text/css" media="print">
+      @page {
+          size: letter;   /* auto is the initial value */
+          margin: 0;  /* this affects the margin in the printer settings */
+      }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto|Montserrat|Open+Sans&display=swap" rel="stylesheet">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        },
+        tex:{
+          tags: 'ams'
+        }
+      });
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </header>
+  <body>
+    <main>
+      <!-- <img src="./images/picture_4.png" width=400 style="display: block;"/>
+      <div style="border-top:5px solid black;width:400px;top:-2px;position: relative;">
+
+      </div> -->
+      <nav>
+        <div class="nav-wrapper-blue">
+          <div class="container">
+          <a class="logo-header brand-logo black-text">
+            <!-- <div>
+              <img src="./images/logo.png" width=50/>
+            </div> -->
+            Brian Bollen
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a>About Me</a></li>
+            <li><a>Research</a></li>
+            <li><a>Projects</a></li>
+            <li><a>Contact</a></li>
+          </ul>            
+        </div>      
+        </div>
+      </nav>
+      <div class="container">
+        <img src="images/torus.png" style="opacity:0.3;position:fixed;z-index:-1;right:10px;width:300px;transform:rotate(45deg);top:100px;">
+        <div class="section">
+          <div class="title-area">
+            <h2 class="title">About Me</h2>
+          </div>
+          <div style="display:flex;flex-direction:row;justify-content:center;">
+            <p style="font-size:1.2em;text-align:left;width:75%">I am currently a PhD Student in the Applied Mathematics Program at the University of Arizona. My research interests are in the applications of topology to real-word problems. My passions outside of mathematics include Music and Web-Development/Design.</p>
+            <div><img src="./images/self_2.jpg" class="z-depth-1" style="border-radius:50%" width=250/></div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="title-area">
+            <h2 class="title">Research</h2>
+          </div>
+          <h4>Topological Analysis of Large-Scale, Multifaceted Data</h4>
+          <p>I currently being advised by Professor Joshua Levine of the Computer Science department on a project intended to study large-scale data sets using topological methods. The goal is to examine existing tools that are used to measure distance between topological structures (bottleneck distance for Persistence Diagrams, interleaving distance of Reeb Graphs, for example) with the intent to apply these metrics or modify them in a way that they become useful to the study of these data sets. For example, suppose we have $n$ data sets from $n$ runs of a climate simulation. Given the stochastic nature of these simulations, many of the features - such as minima and maxima - may be different. How do we measure how similar two of these simulations are to each other? How do we determine what would be the true nature of this data we are attempting to simulate? One initial idea is to measure the pairwise similarity of these structures to each other by computing a "distance" between these simulations.</p>
+          <p>In this formulation, there are multiple challenges to overcome: What does the distance metric between the topological structures tell us about the underlying scalar field that it arises from? How can we efficiently compute this distance so that the run time of ${n \choose 2}$ computations is reasonable?</p>
+        </div>  
+        <div class="section">
+          <div class="title-area">
+            <h2 class="title">Projects</h2>
+          </div>    
+          <h3>MuView</h3>
+          <p>MuView is an in-development visualization tool to aid in the exploratory analysis of music review data. It pulls review data from multiple music publication websites to create a dynamic, interactive experience for users to navigate the multitude of reviews.</p>
+          <p>Many current review aggregation sites have no way to make complex queries on the data (such as unions and intersections of sets). Even finding simple lists of the top rated albums by specific publications are difficult. This is an attempt to allow users to navigate the lanscape of review data in a more versatile way. The features include choosing your own publications to pull data from, sort by ratings, peform unions and intersections of multiple sets (groups) of albums, view year-end ranks for each album, and more</p>
+          <p>MuView is built in React.js and utilizes D3.js for dynamic data interatcions. There will (eventually) be a live-version of this available. The source code for MuView can be seen on GitHub.</p>
+          <div style="display:flex;justify-content: center;margin-top:60px;"><img src="./images/muview.png" class="z-depth-3" style="width:70%"/></div>
+        </div>
+      </div>
+    </main>
+    <!-- <footer class="page-footer white">
+      <div class="container">
+        <h4>Contact</h4>
+        <ul>
+          <li>bbollen23@math.arizona.edu</li>
+        </ul>      
+      </div>
+    </footer> -->
+    <footer class="page-footer grey lighten-5 z-depth-1">
+          <div style="margin:15px"><img src="./images/GitHub-Mark-32px.png"/></div>
+          <div style="margin:15px"><img src="./images/LI-In-Bug.png" width="32"/></div>
+          <!-- <div class="row">
+            <div class="col l6 s12">
+              <h5 class="black-text">Contact</h5>
+              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="black-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+            </div>
+          </div> -->
+        <!-- <div class="footer-copyright">
+          <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+        </div> -->
+      </footer>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>

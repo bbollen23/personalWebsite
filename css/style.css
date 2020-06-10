@@ -1,0 +1,18 @@
+/* Error: The target selector was not found.
+ * Use "@extend .blue !optional" to avoid this error.
+ *   ,
+ * 9 |   @extend .blue, .lighten-4
+ *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   css/style.sass 9:3  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: The target selector was not found.\aUse "@extend .blue !optional" to avoid this error.\a   \2577 \a 9 \2502    @extend .blue, .lighten-4\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   css/style.sass 9:3  root stylesheet';
+}
