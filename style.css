@@ -1,0 +1,161 @@
+body{
+  margin:0px;
+}
+
+.container{
+  width:8.5in;
+  height: 11in;
+  /* border:1px solid rgb(220,220,220);  */
+  display:flex;
+  font-family: 'Open-Sans', sans-serif;
+  font-size:15pt
+  /* justify-content: center; */
+  /* align-items:center;   */
+}
+
+.inner-container{
+  display:flex;
+  flex:1;
+  /* border:1px solid black; */
+  flex-direction: column;
+  margin: 0.4in 0.65in;
+}
+
+.header{
+  display:flex;
+  flex:0.17;
+  flex-direction:column;
+  justify-content: space-between;
+}
+
+.header .top{
+  flex:0.65;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.header .bottom{
+  float: 0.35;
+  display: flex;
+  justify-content: flex-end;  
+  flex-direction: column;
+}
+
+.main{
+  display:flex;
+  flex:0.83;
+  /* border:1px solid  red; */
+  padding-top:10px;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.name{
+  font-size:1.7em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subtitle{
+  font-size:1em;
+  font-family: 'Montserrat', sans-serif;
+  align-self:center;
+}
+
+.abstract{
+  font-size:0.8em;
+}
+
+.contact-bar{
+  height:40px;
+  display:flex;
+  background-color:#243665;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:8.5in;
+  position: absolute;
+  margin-left:-0.65in;
+}
+
+.contact-bar .inner-contact-bar{
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  width:85%;
+}
+
+.contact-bar .inner-contact-bar .entry{
+  color:white;
+  font-family:'Lato', sans-serif;
+  font-size:0.7em;
+}
+
+.section{
+  display:flex;
+  flex-direction: column;
+}
+
+.section-title{
+  font-family:'Lato',sans-serif;
+  text-transform: uppercase;
+  font-size:0.8em;
+  margin-bottom:0px;
+  border-bottom:1px solid black;
+}
+
+.sub-section{
+  margin-top:10px; 
+}
+
+.sub-section-title{
+  font-family: 'Lato',sans-serif;
+  font-size:0.65em;
+  font-weight:600;
+}
+
+.sub-section-subtitle{
+  margin-top:3px;
+  font-family:'Lato',sans-serif;
+  font-style:italic;
+  font-size:0.65em;
+}
+
+.details{
+  font-size:0.6em;
+  margin-left:5px;
+}
+
+li{
+  margin-bottom:8px;
+}
+
+/* Skills */
+
+.skill-container{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap; 
+}
+
+.skills-title{
+  font-weight:600;
+  font-size:0.7em;
+}
+
+.skill{
+  font-size:0.6em;
+  padding:3px 5px;
+  margin:0px 3px 2px 3px;
+  border-radius:10px;
+  color:rgb(70,70,70);
+  /* font-weight:600; */
+  /* color:white; */
+  background-color:white;
+  /* font-family:'Lato', sans-serif; */
+  font-family: 'Ubuntu-Mono',monospace;
+  border:1px solid rgb(90,90,90);
+  /* border:1px solid #63cdb6; */
+  /* background-color:#63cdb6; */
+
+}

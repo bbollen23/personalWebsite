@@ -40,70 +40,7 @@
 @import "components/datepicker";
 @import "components/timepicker";
 
-// My shit
 
-.ilike-blue-container{
-  @extend .blue, .lighten-4;
-}
+@import "personalExtensions";
 
-.nav-wrapper-blue{
-  @extend .nav-wrapper, .white, .lighten-5;
-}
 
-#nav-mobile li a{
-  @extend .black-text;
-  margin: 0px 20px 4px;
-  padding:0px;
-  // padding-bottom:10px;
-}
-.page-footer.grey.lighten-5 p,
-.page-footer.grey.lighten-5 div,
-.page-footer.grey.lighten-5 a{
-  @extend .black-text;
-}
-
-.page-footer{
-  margin-top:50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height:125px;
-}
-#nav-mobile li a:hover{
-  background-color:inherit;
-  border-bottom:3px solid black;
-  // border-radius:2px;
-  border-color:#d500f9;
-
-}
-
-.logo-header{
-  font-family:'Sen',sans-serif;
-  align-items:center;
-  display: flex;
-  flex-direction:row;
-}
-
-.logo-header .name{
-  font-size:2.0em;
-}
-
-h3,h4,h5{
-  font-family:'Oswald', sans-serif;
-}
-
-// .section{
-//   width:100%
-//   display:flex;
-//   flex:1;
-//   flex-direction:column;
-// }
-
-.section .title-area{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // border-bottom:1px solid black;
-  padding-bottom:10px;
-}

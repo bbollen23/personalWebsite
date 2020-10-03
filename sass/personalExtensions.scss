@@ -1,0 +1,171 @@
+//---------------Variables---------------------------
+
+$logo-font:'Sen',sans-serif;
+$main-font:'Lato',sans-serif;
+$main-color:black;
+$header-font:'Oswald', sans-serif;
+
+//---------------------------------------------------
+
+//--------------------------Mobile Breakpoints---------------------------
+
+
+$breakpoints: (
+  'x-small': ( min-width:320px),
+  'small'  : ( min-width:  767px ),
+  'medium' : ( min-width:  992px ),
+  'large'  : ( min-width: 1200px )
+);
+ 
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+//-----------------------------------------------------------------------
+
+
+
+
+
+
+
+// My shit
+
+html,body{
+  @include respond-to(x-small){
+    font-size:8pt;
+  }
+
+  @include respond-to(small){
+    font-size:10pt;
+  }
+
+
+  @include respond-to(medium){
+    font-size:12pt;
+  }
+
+  // @include respond-to(large){
+  //   font-size:8pt;
+  // }
+}
+
+
+.nav-wrapper-white{
+  @extend .nav-wrapper, .white, .lighten-5;
+}
+
+#nav-mobile li a{
+  @extend .black-text;
+  margin: 0px 20px 4px;
+  padding:0px;
+}
+.page-footer.grey.lighten-5 p,
+.page-footer.grey.lighten-5 div,
+.page-footer.grey.lighten-5 a{
+  @extend .black-text;
+}
+
+.page-footer{
+  margin-top:50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height:125px;
+}
+#nav-mobile li a:hover{
+  background-color:inherit;
+  border-bottom:3px solid black;
+  border-color:#d500f9;
+
+}
+
+.logo-header{
+  font-family:$logo-font;
+  align-items:center;
+  display: flex;
+  flex-direction:row;
+}
+
+.logo-header .name{
+  font-size:2.0em;
+}
+
+h3,h4,h5{
+  font-family:$header-font;
+}
+
+
+.section .title-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom:10px;
+
+
+}
+
+#torus-image{
+  opacity:0.3;
+  position:fixed;
+  z-index:-1;
+  right:10px;
+  width:300px;
+  transform:rotate(45deg);
+  top:100px;
+  display:none;
+
+
+  @include respond-to(medium){
+    display:block;
+  }
+
+}
+
+#profile-pic{
+  border-radius:50%;
+  width:250px;
+
+  @include respond-to(x-small){
+   width:150px;
+  }
+
+  @include respond-to(small){
+    width:250px;
+  }
+
+}
+
+#about-me.section{
+  // @include respond-to(x-small){
+  //   height:300px;
+  // }
+
+  // @include respond-to(small){
+  //   height:400px;
+  // }
+
+
+  // @include respond-to(medium){
+  //   height:700px;
+  // }
+
+  // @include respond-to(large){
+  //   height:800px;
+  // }
+} 
