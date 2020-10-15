@@ -11,6 +11,8 @@ $accent-color-1:#d500f9;
 
 $accent-color-2:#48f0a7;
 
+$accent-color-3: #2970ff;
+
 //---------------------------------------------------
 
 //--------------------------Mobile Breakpoints---------------------------
@@ -166,23 +168,47 @@ h3,h4,h5{
 }
 
 #about-me.section{
-  // @include respond-to(x-small){
-  //   height:300px;
-  // }
+  margin-top:200px;
+  @include respond-to(x-small){
+    margin-top:50px;
+  }
 
-  // @include respond-to(small){
-  //   height:400px;
-  // }
+  @include respond-to(small){
+    margin-top:100px;
+  }
 
 
-  // @include respond-to(medium){
-  //   height:700px;
-  // }
+  @include respond-to(medium){
+    margin-top:200px;
+  }
 
-  // @include respond-to(large){
-  //   height:800px;
-  // }
+  @include respond-to(large){
+    margin-top:200px;
+  }
 } 
+
+#about-me.section p{
+  font-size:1.3em;
+  font-weight:500;
+  text-align:left;
+  width:75%;
+  @include respond-to(x-small){
+    width:100%;
+  }
+
+  @include respond-to(small){
+    width:85%;
+  }
+
+
+  @include respond-to(medium){
+    width:75%;
+  }
+
+  @include respond-to(large){
+    width:75%;
+  }
+}
 
 
 
@@ -190,7 +216,10 @@ h3,h4,h5{
 
 #my-logo{
   // font-family:$logo-font;
-  font-family:'Press Start 2P', cursive;
+  // font-family:'Press Start 2P', cursive;
+  // font-family:'Monoton',sans-serif;
+  // font-family:'Squada One',sans-serif;
+  font-family:'Quantico',sans-serif;
   font-weight:700;
   align-items:center;
   display: flex;
@@ -198,12 +227,15 @@ h3,h4,h5{
   // animation: text-flicker 3s linear infinite;
   // color:$accent-color-1;
   color:black;
-  font-size:1.5em;
-  position:absolute;
-  letter-spacing:0.3em;
+  font-size:2.2em;
+  // position:absolute;
+  letter-spacing:0.1em;
 
   
 }
+
+
+// @import url(http://fonts.googleapis.com/css?family=Monoton|Press+Start+2P|Quantico:400,700|Squada+One);
 
 // div {
 //   text-align:center;
@@ -232,22 +264,72 @@ h3,h4,h5{
 
 .offset.style-one {
 
-  animation: letter-flicker 2s linear infinite;
-  text-shadow: 1px 1px $accent-color-1, 2px 2px $accent-color-1, 3px 3px $accent-color-1, 4px 4px $accent-color-1, 5px 5px $accent-color-1;
+  // animation: letter-flicker 2s linear infinite;
+  text-shadow: 1px 1px $accent-color-1, 2px 2px $accent-color-1, 3px 3px $accent-color-1;
 
   // color:$accent-color-1;
 }
 
 .offset.style-two {
 
-  animation: text-flicker 2s linear infinite;
-  text-shadow: 1px 1px $accent-color-2, 2px 2px $accent-color-2, 3px 3px $accent-color-2, 4px 4px $accent-color-2, 5px 5px $accent-color-2;
+  // animation: text-flicker 2s linear infinite;
+  text-shadow: 1px 1px $accent-color-2, 2px 2px $accent-color-2, 3px 3px $accent-color-2;
 
   // color:$accent-color-1;
 }
 
+.offset.style-three {
+  // animation: letter-flicker 2s linear infinite;
+  text-shadow: 1px 1px $accent-color-3, 2px 2px $accent-color-3, 3px 3px $accent-color-3;
+}
+
+.flicker-full-text{
+  animation:weird-flicker 2s linear infinite;
+  text-shadow: 1px 1px $accent-color-1, 2px 2px $accent-color-1, 4px 4px $accent-color-2, 5px 5px $accent-color-2, 6px 6px $accent-color-2;
+
+}
+
+.full-text{
+  text-shadow: 1px 1px $accent-color-1, 2px 2px $accent-color-1, 4px 4px $accent-color-2, 5px 5px $accent-color-2, 6px 6px $accent-color-2;
+
+}
+
+
+
 .cont-blink{
   animation: underscore-flicker 1s step-start 0s infinite;
+  
+}
+
+@keyframes weird-flicker{
+  0%{
+    transform:skew(0);
+    opacity:1;
+  }
+  1%{
+    transform:scale(3,0.25);
+    transform:skew(300deg, 10deg);
+    opacity:0.5;
+  }
+  2%{
+    transform:skew(0);
+    opacity:1;
+  }
+
+  34%{
+    transform:skew(0);
+    opacity:1;
+  }
+
+  35%{
+    transform:scale(3,0.25);
+    transform:skew(60deg, 10deg);
+    opacity:0.5;
+  }
+  36%{
+    transform:skew(0);
+    opacity:1;
+  }
 }
 
 @keyframes underscore-flicker{
